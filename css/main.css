@@ -31,9 +31,9 @@ p {
     line-height: 1.5rem;
 }
 
-ul a li {
+.links-container a {
     color: #fff;
-    list-style-type: none;
+    text-decoration: none;
 }
 
 .description-text,
@@ -48,18 +48,10 @@ img {
 
 .contact-logo,
 .contact-information,
-ul a li,
+.links-container a,
 small,
 .feature-text h2 {
     padding-bottom: 1.5rem;
-}
-
-.description-text p {
-    margin: 2rem 0;
-}
-
-#contact {
-    padding-top: 7rem;
 }
 
 .location-icon {
@@ -124,6 +116,10 @@ header {
     gap: 4rem;
 }
 
+.description-text p {
+    margin: 2rem 0;
+}
+
 /* Features */
 
 #features {
@@ -169,6 +165,10 @@ footer {
     width: 75%;
 }
 
+#contact {
+    padding-top: 7rem;
+}
+
 .contact-container {
     padding-bottom: 2rem;
     display: flex;
@@ -186,6 +186,11 @@ address .contact-logo {
     gap: 2rem;
 }
 
+.links-container {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 .social-icons {
     align-self: center;
     width: 50%;
@@ -193,3 +198,88 @@ address .contact-logo {
     justify-content: space-between;
 }
 
+/* Desktop Styles */
+
+@media screen and (min-width: 1440px) {
+    /* General Styles */
+
+    header,
+    main,
+    footer {
+        padding: 3.5rem 4.5rem;
+    }
+
+    .feature {
+        padding-left: 5rem;
+        text-align: left;
+    }
+
+    small {
+        text-align: right;
+        width: 100%;
+    }
+
+    /* Header Styles */
+
+    header {
+        background: url(../images/bg-hero-desktop.svg) no-repeat center;
+        background-size: cover;
+    }
+
+    #description {
+        width: 100%;
+        flex-flow: row nowrap;
+    }
+
+    .description-text {
+        text-align: left;
+        flex-basis: 45%;
+    }
+
+    /* Features Section */
+
+    .feature-one,
+    .feature-three {
+        flex-direction: row-reverse;
+    }
+
+    .feature-two {
+        flex-direction: row;
+    }
+
+    /* Footer Styles */
+
+    .sign-up {
+        width: 50%;
+    }
+
+    .contact-container {
+        flex-flow: row nowrap;
+    }
+
+    address,
+    .links-container,
+    .social-icons {
+        flex-basis: 33%;
+    }
+
+    .links-container {
+        padding: 3rem 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links-container a {
+        padding-bottom: 0;
+        flex-basis: 34%;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+
+    .social-icons p {
+        padding-right: 2rem;
+    }
+}
